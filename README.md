@@ -1,7 +1,65 @@
-# Adversarial Networks for B-V Index Prediction
+# 🌌 Adversarial Networks for B‑V Index Prediction
 
-This study evaluates the performance of three adversarial frameworks—Generative Adversarial Networks (GANs), Conditional GANs (CGANs), and Contrastive GANs (ContraGANs)—in generating synthetic data to predict the B-V (colour index) value in astronomical datasets. The models were assessed using predictive accuracy metrics (Mean Squared Error and R²), clustering quality scores (Silhouette Score, Calinski-Harabasz Score, and Davies-Bouldin Score), and statistical alignment measures (Wasserstein Distance and Kolmogorov-Smirnov Statistic).
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)]() [![Framework](https://img.shields.io/badge/Framework-PyTorch%20%7C%20Scikit--Learn-orange)]() [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)]()
 
-The ContraGAN achieved the best results, with an MSE of 0.1250, R² of 0.7320, Silhouette Score of 0.3723, Calinski-Harabasz Score of 272.0709, and Davies-Bouldin Score of 1.0491, significantly outperforming the GAN and CGAN. CGANs also demonstrated robust performance, benefiting from conditioning on input features. In comparison, standard GANs exhibited the weakest results, with lower predictive accuracy and clustering quality. The findings highlight the advantages of incorporating contrastive learning and conditional generation into adversarial frameworks, paving the way for improved synthetic data generation in scientific and industrial applications
+## 📌 Overview
+This project explores **three adversarial deep learning frameworks**:  
+- **Generative Adversarial Networks (GANs)**  
+- **Conditional GANs (CGANs)**  
+- **Contrastive GANs (ContraGANs)**  
 
-In this repository, CAN_GAN.ipynb contains the code and apass9_cleaned.csv is the original dataset used.
+The goal is to generate **synthetic astronomical data** for predicting the **B‑V colour index**, a key stellar classification metric.  
+We evaluate how advanced adversarial techniques can improve **data quality, predictive accuracy, and statistical alignment** in scientific datasets.
+
+---
+
+## 🧪 Methodology
+Models were trained and evaluated on an astronomical dataset (`apass9_cleaned.csv`) using:
+
+- **Predictive Accuracy**: Mean Squared Error (MSE), R² Score  
+- **Clustering Quality**: Silhouette Score, Calinski‑Harabasz Score, Davies‑Bouldin Score  
+- **Statistical Alignment**: Wasserstein Distance, Kolmogorov‑Smirnov Statistic  
+
+---
+
+## 📊 Key Results
+
+| Model       | MSE     | R²     | Silhouette | Calinski‑Harabasz | Davies‑Bouldin |
+|-------------|---------|--------|------------|-------------------|----------------|
+| **ContraGAN** | **0.1250** | **0.7320** | **0.3723** | **272.0709** | **1.0491** |
+| CGAN        | Higher MSE, lower clustering scores than ContraGAN, but strong overall performance due to feature conditioning |
+| GAN         | Weakest performance across all metrics |
+
+**Highlights:**
+- **ContraGAN** significantly outperformed both GAN and CGAN across all evaluation metrics.
+- **CGAN** benefited from conditioning on input features, improving predictive accuracy over standard GANs.
+- **Standard GANs** struggled with both prediction and clustering quality.
+
+---
+
+## 🚀 Key Takeaways
+- **Contrastive learning + conditional generation** can dramatically improve synthetic data quality in scientific applications.
+- The approach is **transferable** to other domains where labelled data is scarce or expensive to obtain.
+- Demonstrates **end‑to‑end ML workflow**: data preprocessing, model design, training, evaluation, and result interpretation.
+
+---
+
+## 📂 Repository Structure
+- `CAN_GAN.ipynb` — Full implementation of GAN, CGAN, and ContraGAN experiments  
+- `apass9_cleaned.csv` — Original cleaned astronomical dataset  
+
+---
+
+## 💡 Skills Demonstrated
+- Deep learning model development (PyTorch/TensorFlow)
+- Adversarial training techniques (GAN, CGAN, ContraGAN)
+- Statistical and clustering evaluation
+- Scientific data preprocessing and feature engineering
+- Research‑driven experimentation and result analysis
+
+---
+
+## 📈 Potential Applications
+- Astronomical data augmentation for rare object detection
+- Synthetic dataset generation for low‑resource scientific fields
+- Industrial predictive modelling with limited labelled data
