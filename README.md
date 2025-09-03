@@ -85,7 +85,8 @@ Each adversarial framework was implemented with tailored architectural and train
 ---
 ## Flow Chart
 
-<img width="338" height="641" alt="image" src="https://github.com/user-attachments/assets/52df9f95-f65f-409b-b89d-641caa505619" />
+<img width="321" height="660" alt="image" src="https://github.com/user-attachments/assets/111bf21c-6a9e-496f-ba8b-925078b72ec2" />
+
 
 ---
 
